@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age-calculator</title>
+    <link href="style.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <h1 id="heading">Age<br><span>Calculator</span></h1>
+            <input type="date" id="dateInput">
+            <button id="caldbtn" onclick="boom()">calculate</button>
+        </div>
+        <div class="ans">
+            <p id="finalop">The age is 51 years </p>
+        </div>
+    </div>
+    
+
+
+    <script>
+
+        function boom(){
+
+                const bday=document.getElementById("dateInput")
+                const todaydate=new Date();
+                const bd=new Date(bday.value);
+
+                let y1=todaydate.getFullYear();
+                let y2=bd.getFullYear();
+                let m1=todaydate.getMonth();
+                let m2=bd.getMonth();
+                let d1=todaydate.getDate();
+                let d2=bd.getDate();
+
+                let age=calAge(y1,y2,m1,m2,d1,d2)
+                var a=document.getElementById('finalop')
+                if (age!=0 && m2==m1 && d1==d2){
+                        a.innerHTML=`The age is ${age} years and Happy birthday!`;
+                }
+                else if (age!=0){
+                    a.innerHTML=`The age is ${age} years !`;
+                }
+                else{
+                    a.innerHTML=("The baby born this year !");
+                }
+                a.style.display="block";
+
+            }
+            
+        function calAge(y1,y2,m1,m2,d1,d2){
+            let y3=y1-y2;
+            if (m2>=m1 && d2>d1){
+                return y3-1;
+            }
+            else{
+               return y3;
+            }
+        }
+
+
+
+            
+    </script>
+</body>
+</html>

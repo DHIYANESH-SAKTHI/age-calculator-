@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image:linear-gradient(to bottom right, blue, red);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box h1{
+    color: rgb(255, 255, 81);
+    font-size: 46px;
+    padding-bottom: 20px;
+}
+.box span{
+    color: rgb(249, 249, 249);
+}
+.box input{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+.box button{
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 20px;
+    border: none;
+    margin:10px;
+    transition: transform,background-color,color, 1s ease;
+    
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.ans p{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: yellow;
+    display: none;
+
+}
+.ans{
+padding-top: 20px;
+}
